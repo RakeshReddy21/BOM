@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form"> 
+    Username:- <input type="text" id="inputs">
+    <br><br>
+    Email Id:- <input type="email" id="inputs1">
+    <br><br>
+    password:- <input type="password" id="inputs2">
+    <br><br>
+    <input type="submit">
+    
+    <p id="p1"></p>
+    </form>
+    <script>
+        let form=document.getElementById("form")
+        let input=document.getElementById("inputs")
+        let input1=document.getElementById("inputs1")
+        let input2=document.getElementById("inputs2")
+        let p1=document.getElementById("p1")
+        form.addEventListener("submit",(event)=>{
+            event.preventDefault();
+            let p=localStorage.setItem("name",input.value)
+            let email=localStorage.setItem("email",input1.value)
+            let password=localStorage.setItem("password",input2.value)
+
+            let n =sessionStorage.setItem("name",input.value)
+            let m=sessionStorage.setItem("email",input1.value)
+            let o=sessionStorage.setItem("password",input2.value)
+        })
+    </script>
+</body>
+</html>
